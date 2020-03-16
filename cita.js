@@ -20,6 +20,27 @@ export default class Cita {
     this._paciente = paciente;
   }
 
+  getHora() {
+    return this._hora;
+  }
+
+  getDoctor() {
+    return this._doctor;
+  }
+
+  getFecha() {
+    return this._fecha;
+  }
+
+  esIgualA(cita) {
+    if (cita.getHora() === this._hora &&
+      cita.getDoctor() === this._doctor &&
+      cita.getFecha() === this._fecha) {
+      return true;
+    }
+    return false;
+  }
+
   getPerfil() {
     return `${this._fecha.getFecha()}, ${this._hora.getFormato24()}, ${"Dr. " +
       this._doctor.getDoctor().getApellidoPaterno()}, ${this._paciente.getNombre().getNombreCompleto()}`;
