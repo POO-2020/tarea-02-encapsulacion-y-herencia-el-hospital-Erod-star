@@ -107,13 +107,9 @@ export default class Hospital {
   }
 
   buscarIndiceCita(cita) {
-    let indice = -1;
-    this._citas.forEach((c, i) => {
-      if (c.esIgualA(cita)) {
-        indice = i;
-      }
-    });
-    return indice;
+    let resultado = this._citas.find(c => c.esIgualA(cita));
+
+    return resultado;
   }
 
   eliminarCita(cita) {

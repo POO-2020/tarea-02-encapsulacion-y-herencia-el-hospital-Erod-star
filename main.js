@@ -153,10 +153,6 @@ export default class Main {
         console.log(h.buscarCita(this._cita2));
         console.log(h.buscarCita(this._cita3));
 
-        console.log(h.buscarIndiceCita(this._cita1));
-        console.log(h.buscarIndiceCita(this._cita2));
-        console.log(h.buscarIndiceCita(this._cita3));
-
         console.log(h.eliminarCita(this._cita2));
 
         console.log(h.listarCitas());
